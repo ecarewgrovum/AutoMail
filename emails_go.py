@@ -15,30 +15,30 @@ If you could please take a few minutes to verify the data below, that would help
 Chief executive officer in 2011 and 2012: %s, %s
 Total taxable compensation 2011: $%s
 Total nontaxable benefits 2011: $%s
-Total compensation 2011: $ %s + %s + %s
+Total compensation 2011: $ %s
 
-Total taxable compensation 2012: $%d
-Total nontaxable benefits 2012: $%d
-Total compensation 2012: $%d
+Total taxable compensation 2012: $%r
+Total nontaxable benefits 2012: $%r
+Total compensation 2012: $%r
 
-Highest paid employee who is not the CEO in 2011 and 2012:%s
-Total taxable compensation 2011: $%d
-Total nontaxable benefits 2011: $%d
-Total compensation 2011: $%d
+Highest paid employee who is not the CEO in 2011 and 2012:%s, %s
+Total taxable compensation 2011: $%r
+Total nontaxable benefits 2011: $%r
+Total compensation 2011: $%r
 
-Total taxable compensation 2012: $%d
-Total nontaxable benefits 2012: $%d
-Total compensation 2012: $%d
+Total taxable compensation 2012: $%r
+Total nontaxable benefits 2012: $%r
+Total compensation 2012: $%r
 
 I've also attached a copy of your full responses for your records. Please review it and let us know if any of your data need to be changed. 
 
 Many thanks for your assistance, 
 
 -------------------------------
-""" % (aList[5], aList[0], aList[1], aList[11], aList[15], aList[59], aList[60], aList[59], aList[60], aList[61])
+""" % (aList[2], aList[0], aList[1], aList[3], aList[7], aList[11], aList[12], aList[14], aList[15], aList[16], aList[18], aList[19], aList[23], aList[27], aList[28], aList[30], aList[31], aList[32], aList[34])
 	return message
 
-with open('verification_emails_0806.csv', 'rU') as csvfile:
+with open('salaryverificationemails_0807.csv', 'rU') as csvfile:
 	read = csv.reader(csvfile)
 	counter = 0
 	for x in read:
