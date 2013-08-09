@@ -5,8 +5,10 @@ def messagegen(aList):
 	
 Text: %s
 
-Hi %s ,
-Thanks so much for taking the time to complete our Chronicle of Philanthropy survey of executive compensation. 
+Hi %s
+Thanks soTurtles turls
+
+ensation. 
 
 We're taking active steps this year to ensure the data is double-checked early in the process.
 
@@ -35,15 +37,15 @@ I've also attached a copy of your full responses for your records. Please review
 Many thanks for your assistance, 
 
 -------------------------------
-""" % (aList[2], aList[0], aList[1], aList[3], aList[4], aList[5], aList[6], aList[7], aList[8], aList[9], aList[10], aList[11], aList[12], aList[13], aList[14], aList[15], aList[16], aList[17], aList[18])
+""" % (aList[2], aList[0], aList[1], aList[3], aList[7], aList[11], aList[12], aList[14], aList[15], aList[16], aList[18], aList[19], aList[23], aList[27], aList[28], aList[30], aList[31], aList[32], aList[34])
 	return message
 
-with open('sal_emails_0809.csv', 'rU') as csvfile:
+with open('salaryverificationemails_0807.csv', 'rU') as csvfile:
 	read = csv.reader(csvfile)
 	counter = 0
 	for x in read:
 		if counter != 0: # if not header row
-			with open('sal_emails_0809.txt', 'a+') as textfile:
+			with open('400_emails.txt', 'a+') as textfile:
 				textfile.write(messagegen(x))
 		else:
 			counter += 1
