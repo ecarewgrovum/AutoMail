@@ -17,18 +17,18 @@ Total taxable compensation 2011: $%s
 Total nontaxable benefits 2011: $%s
 Total compensation 2011: $ %s
 
-Total taxable compensation 2012: $%r
-Total nontaxable benefits 2012: $%r
-Total compensation 2012: $%r
+Total taxable compensation 2012: $%s
+Total nontaxable benefits 2012: $%s
+Total compensation 2012: $%s
 
 Highest paid employee who is not the CEO in 2011 and 2012:%s, %s
-Total taxable compensation 2011: $%r
-Total nontaxable benefits 2011: $%r
-Total compensation 2011: $%r
+Total taxable compensation 2011: $%s
+Total nontaxable benefits 2011: $%s
+Total compensation 2011: $%s
 
-Total taxable compensation 2012: $%r
-Total nontaxable benefits 2012: $%r
-Total compensation 2012: $%r
+Total taxable compensation 2012: $%s
+Total nontaxable benefits 2012: $%s
+Total compensation 2012: $%s
 
 I've also attached a copy of your full responses for your records. Please review it and let us know if any of your data need to be changed. 
 
