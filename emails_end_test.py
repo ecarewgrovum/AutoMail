@@ -38,4 +38,5 @@ with open('End_emails_test.csv', 'rU') as csvfile:
 		if counter != 0: #if not header row
 			with open('End_emails_test_1024.txt', 'a+') as textfile:
 		else:
+			
 		counter += 1
