@@ -35,8 +35,10 @@ with open('End_emails_test.csv', 'rU') as csvfile:
 	read = csv.reader(csvfile)
 	counter = 0
 	for x in read:
-		if counter != 0: #if not header row
+		#if not header row
+		if counter != 0: 
 			with open('End_emails_test_1024.txt', 'a+') as textfile:
+				textfile.write(messagegen(x))
+
 		else:
-			
-		counter += 1
+			counter += 1
