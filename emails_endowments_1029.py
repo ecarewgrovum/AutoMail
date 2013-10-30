@@ -3,11 +3,11 @@ import csv
 def messagegen(aList):
 	message = """To: %s
 
-Subject: Chronicle of Philanthropy Endowment Report Verification: RESPOND BY FRIDAY, NOV. 1
+Subject: Chronicle of Philanthropy's Endowment Report Verification: PLEASE RESPOND BY FRIDAY, NOV. 1
  
 %s 
 
-Friday, October 25, 2013
+Tuesday, October 29, 2013
 
 Dear %s, 
 
