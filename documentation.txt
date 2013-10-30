@@ -1,0 +1,69 @@
+Notes for Sarah & data team moving forward. 
+
+The script below is the shell for each project. To update, copy the script below into a new document and save it as .py
+The naming convention I would recommend is Emails_Project_Date.py and then copy for csv and text files. 
+
+You will need to update the sciprt for each batch of emails that you run. I would recommend having at least 10 in each batch. 
+
+The %s represents a field in your .csv export from Vovici. Before you start, identify which fields you need for the email, and which fields you are verifying. 
+
+Below, the first three %s represent email address, org name, and contact name. You will need a clean export from Vovici with the fields you've identifed (contact fields as well as vefification fields from the survey data). Delete any unneccessary columns and number the final row across starting with 0. Then save this file as Emails_Project_Date.csv
+
+Come back to the script text and update, writing your email. Use %s for each place you would like to pull a cell from the csv file. 
+
+Below the text of the emails, fill in the aList[] fields to correspond with the column in the CSV. Remember Column A in the csv should be aList[0]. 
+
+Update the .csv and .txt file names in the script to match the .py naming convention. There's dummy text below to show you where they belong. 
+
+Save all of the files to your AutoMail repo. Then, open the gitignore file and add the .csv file to the list. This ensures the csv with our contacts' email addresses doesn't end up on Github. 
+Save and commit those changes. 
+Then: 
+
+git add "filename.py"
+git commit -m "added new py script"
+git push origin master
+
+Once you've saved the copy of the script that you want, use command line: 
+python NewScriptNme.py to execute
+
+You'll know this has worked when you see the new .txt file pop up in your repo. Again, you do not want to commit this file to github, or else people's email addresses will be made public
+
+----
+
+
+##start copying here##
+import csv
+
+def messagegen(aList):
+	message = """To: %s 
+	
+Text: %s 
+
+Hi %s
+
+YOUR VERIFICATION MESSAGE HERE 
+
+Verify this field: %s, %s
+Verify this field: $%s
+verify this field: $%s
+Verify this field: $ %s
+
+MORE OF YOUR TEXT HERE. 
+
+THANKS, 
+SURVEY TEAM
+
+-------------------------------
+""" % (aList[2], aList[0], aList[1], aList[3], aList[7], aList[11], aList[12], aList[14], aList[15], aList[16], aList[18], aList[19], aList[23], aList[27], aList[28], aList[30], aList[31], aList[32], aList[34])
+	return message
+
+with open('ExportFromVoviciAndDate.csv', 'rU') as csvfile:
+	read = csv.reader(csvfile)
+	counter = 0
+	for x in read:
+		if counter != 0: # if not header row
+			with open('UseSameNameAsCSVandDate.txt', 'a+') as textfile:
+				textfile.write(messagegen(x))
+		else:
+			counter += 1
+##end here##
